@@ -1,0 +1,54 @@
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #583F3A;
+    color: #FFFF;
+    padding: 10px 15px;
+    width: 80%;
+    border-radius: 20px;
+    font-size: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.heart-button {
+    --padding-end: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-start: 0px;
+}
+
+.profile-photo {
+    width: 30px;
+    height: 30px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+    gap: 15px;
+}
+
+.info-comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.like-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px;
+}
+
+.hear-icon {
+    width: 20px;
+    height: 20px;
+    color: red;
+    margin: 0px
+}
