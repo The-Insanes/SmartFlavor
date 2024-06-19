@@ -15,7 +15,7 @@ const Login: React.FC = () => {
         <IonPage>
               <IonContent>
                   <Header/>
-                  <IonImg src="videos/Download.mp4"></IonImg>
+                  <Presentation></Presentation>
               </IonContent>
         </IonPage>
     );
