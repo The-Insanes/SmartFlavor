@@ -11,7 +11,7 @@ const Header: React.FC<ContainerProps> = (props) => {
         <div className={props.className}>
             <div className='header-container'>
                 <IonButton fill='clear'>
-                    <IonImg src='./images/smartflavor/logo.svg'></IonImg>
+                    <IonImg className="logo-smartflavor" src='./images/smartflavor/logo.svg'></IonImg>
                 </IonButton>
                 <IonButton fill='clear'>
                     <IonIcon className='search-button' icon={search}></IonIcon>
