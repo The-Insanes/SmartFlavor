@@ -4,12 +4,16 @@
     background-color: #5A464C;
     width: 300px;
     border-radius: 20px;
-    --padding-start: 15px;
-    gap: 20px;
     color: #FFFF;
+}
+
+.search-bar-button {
+    --padding-start: 10px;
+    --padding-end: 0px;
+    --padding-top: 0px;
+    --padding-below: 0px;
 }
 
 .search-icon {
     color: rgb(230, 96, 7);
-
 }
