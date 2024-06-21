@@ -1,0 +1,50 @@
+.comment-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    background-color: #FFEFBD;
+    border-radius: 20px 20px 0px 0px;
+    padding-top: 10px;
+    gap: 5px;
+}
+
+.comment-list {
+    --ion-background-color: transparent;
+}
+
+.comment-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.user-comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rectangle-up-down {
+    width: 70%;
+    height: 7px;
+    background-color: black;
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+
+.comment-input {
+    --padding-start: 20px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    background-color: #583F3A;
+    color: #FFFF;
+}
+
+.comment-profile-avatar {
+    width: 35px;
+    height: 35px;
+}
