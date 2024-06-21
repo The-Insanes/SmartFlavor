@@ -1,0 +1,118 @@
+.send-publication-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFEFBD;
+    padding-top: 10px;
+    gap: 10px;
+    height: 450px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.rectangle-up-down {
+    width: 70%;
+    height: 7px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.scroll-container {
+    display: flex;
+    --ion-background-color: transparent;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.share-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #583F3A;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.share-button {
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --padding-top: 0px;
+    --padding-below: 0px;
+    --background: transparent;
+    --background-activated: #0000002e;
+
+    div {
+        display: flex;
+        font-size: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px
+    }
+}
+
+.profile_button {
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --padding-top: 0px;
+    --padding-below: 0px;
+    --background: transparent;
+    --background-activated:#0000002e;
+}
+
+.icon-share-link {
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    transform: rotate(-45deg);
+    border-radius: 999px;
+    padding: 5px;
+}
+
+.icon-share-whatsapp {
+    background-color: #25d366;
+    width: 25px;
+    height: 25px;
+    border-radius: 999px;
+    padding: 5px;
+}
+
+.icon-share-facebook {
+    background-color: #3360ff;
+    width: 25px;
+    height: 25px;
+    border-radius: 999px;
+    padding: 5px;
+}
+
+.icon-share-instagram {
+    background: radial-gradient(69.83% 69.83% at 15% 100%, #FFD600 0%, #FF6930 48%, #FE3B36 73%, rgba(254, 59, 54, 0.00) 100%), radial-gradient(138.77% 138.77% at 91.25% 112.5%, #FF1B90 24%, #F80261 44%, #F30190 69%, #C500E9 78%, #7017FF 89%);
+    width: 25px;
+    height: 25px;
+    border-radius: 999px;
+    padding: 5px;
+}
+
+.icon-share-X {
+    background: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 999px;
+    padding: 10px;
+}
+
+.icon-share-phone {
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 999px;
+    padding: 5px 7px 5px 5px;
+}
+
+.label-share {
+    text-wrap: wrap;
+}
