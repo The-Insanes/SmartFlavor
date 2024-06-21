@@ -1,0 +1,51 @@
+.report-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(10, 21%, 29%);
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px 10px 0px 10px;
+
+    h5 {
+        color: #FFFF;
+    }
+}
+
+.report-label {
+    text-align: left;
+    flex: 1;
+}
+
+.rectangle-up-down {
+    width: 70%;
+    height: 7px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.report-title {
+    width: 100%;
+}
+
+.report-options-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+}
+
+.report-description {
+    font-size: 15px;
+}
+
+.report-option {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --padding-top: 0px;
+    --padding-below: 0px;
+    color: #FFFF;
+}
