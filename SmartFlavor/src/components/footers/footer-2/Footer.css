@@ -4,6 +4,8 @@
 }
 
 .footer-container {
+    bottom: 0;
+    position:sticky;
     display: flex;
     font-size: 12px;
     background-color: #5A464C;

@@ -1,12 +1,15 @@
 .search-bar {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #5A464C;
     width: 300px;
     border-radius: 20px;
     --padding-start: 15px;
+    padding-left: 15px; 
     gap: 20px;
     color: #FFFF;
+    margin: 0 auto; 
 }
 
 .search-icon {

@@ -3,7 +3,11 @@ import './login-container.css';
 import InputBar from '../input-bar/input-bar'; // Asegúrate de ajustar la ruta si es necesario
 import { IonButton } from '@ionic/react';
 
-const LoginContainer: React.FC = () => {
+interface LoginContainerProps {
+  onRegisterClick: () => void;
+}
+
+const LoginContainer: React.FC<LoginContainerProps> = ({ onRegisterClick }) => {
   return (
     <div className="login-container">
       <div className="logo-section">
@@ -16,7 +20,7 @@ const LoginContainer: React.FC = () => {
       <div className="forgot-password">¿Has olvidado la contraseña?</div>
       <div className="register-container">
         <div className="register-text">¿No tienes una cuenta? </div>
-        <IonButton fill="clear" className="register-link">Regístrate</IonButton>
+        <IonButton fill="clear" className="register-link" onClick={onRegisterClick}>Regístrate</IonButton>
       </div>
     </div>
   );
@@ -24,4 +28,5 @@ const LoginContainer: React.FC = () => {
 
 export default LoginContainer;
 
+///Arreglar este componente para conectarlo con backend
 
