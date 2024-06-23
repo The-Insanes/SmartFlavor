@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 350px;
+    height: 100%;
     background-color: #FFEFBD;
     border-radius: 20px 20px 0px 0px;
     padding-top: 10px;
@@ -11,6 +11,7 @@
 
 .comment-list {
     --ion-background-color: transparent;
+    height: auto;
 }
 
 .comment-items {
@@ -42,6 +43,10 @@
     --padding-bottom: 10px;
     background-color: #583F3A;
     color: #FFFF;
+}
+
+.comment-input:active {
+    --padding-top: 8000px;
 }
 
 .comment-profile-avatar {
