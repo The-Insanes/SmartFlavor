@@ -1,22 +1,53 @@
 import { IonButton, IonLabel } from "@ionic/react";
 import "./ReportContainer.css"
+import { useEffect, useRef } from "react";
 
 interface ContainerProps {
-    className?: string | undefined
+    className?: string | undefined,
+    close: () => void,
+    view: boolean
 }
 
 const ReportContainer: React.FC<ContainerProps> = (props) => {
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (containerRef.current && !containerRef.current.contains(event.target as Node) && props.view) {
+                props.close();
+            }
+        };
+
+        const handleBackButton = (e: any) => {
+            if (props.view) {
+                e.preventDefault();
+                e.stopPropagation();
+                props.close();
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener('backbutton', handleBackButton);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener('backbutton', handleBackButton);
+        };
+    }, [props.close, props.view]);
+
     return (
         <div className={props.className}>
-            <div className="report-container">
-                <div className="rectangle-up-down"></div>
-                <h5>Reportar</h5>
+            <div ref={containerRef} className="report-container">
+                <div className="top-report">
+                    <div className="rectangle-up-down"></div>
+                    <h5>Reportar</h5>
 
-                <IonLabel class="report-description">
-                    Tú reporte es anónimo, a menos que reportes una infracción de propiedad intelectual. 
-                    Si alguien se encuentra en peligro inminente, llama a los servicios de emergencias locales. 
-                    No esperes.
-                </IonLabel>
+                    <IonLabel class="report-description">
+                        Tú reporte es anónimo, a menos que reportes una infracción de propiedad intelectual. 
+                        Si alguien se encuentra en peligro inminente, llama a los servicios de emergencias locales. 
+                        No esperes.
+                    </IonLabel>
+                </div>
                 
                 <div className="report-options-container">
                     <IonButton className="report-option" slot="start" size="small" fill="clear">
