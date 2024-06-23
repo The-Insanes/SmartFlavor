@@ -84,7 +84,9 @@ const Login: React.FC = () => {
         <IonPage>
             <IonContent>
                 <Header/>
-                <CommentSection profile_photo={"images/profile_photos/chef 1.jpg"} comments={generate_comments()}/>
+                <CommentSection className="pepe" profile_photo={"images/profile_photos/chef 1.jpg"} comments={generate_comments()} close={function (): void {
+                    throw new Error("Function not implemented.");
+                } } view={false}/>
             </IonContent>
         </IonPage>
     );
