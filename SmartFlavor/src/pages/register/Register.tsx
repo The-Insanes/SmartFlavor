@@ -20,8 +20,8 @@ const Register: React.FC = () => {
   return (
     <IonPage>
       <IonContent style={{ '--ion-background-color': '#FFEFBD' }}>
-            <RegisterContainer onRegisterSuccess={handleRegisterSuccess} onLoginClick={handleLoginNavigation} />
-            <Footer/>
+        <RegisterContainer onRegisterSuccess={handleRegisterSuccess} onLoginClick={handleLoginNavigation} />
+        <Footer/>
       </IonContent>
     </IonPage>
   );

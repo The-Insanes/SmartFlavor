@@ -1,19 +1,26 @@
 import React from 'react';
+import { IonInput, IonItem } from '@ionic/react';
 import './input-bar.css';
+import { TextFieldTypes } from '@ionic/core';
 
 interface InputBarProps {
   label: string;
-  type?: string;
+  type?: TextFieldTypes;
+  value: string;
+  onChange: (e: CustomEvent) => void;
 }
 
-const InputBar: React.FC<InputBarProps> = ({ label, type = "text" }) => {
+const InputBar: React.FC<InputBarProps> = ({ label, type = 'text', value, onChange }) => {
   return (
-    <div className="input-bar-container">
-      <label className="input-bar-label">
-        {label}
-        <input className="input-bar" type={type} />
-      </label>
-    </div>
+    <IonItem className="input-bar-container" lines="none">
+      <IonInput 
+        className="input-bar" 
+        type={type} 
+        value={value} 
+        onIonChange={onChange} 
+        placeholder={label} 
+      />
+    </IonItem>
   );
 };
 
