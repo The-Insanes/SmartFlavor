@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     background-color: #5A464C;
-    width: 300px;
+    width: 100%;
     border-radius: 20px;
     color: #FFFF;
 }

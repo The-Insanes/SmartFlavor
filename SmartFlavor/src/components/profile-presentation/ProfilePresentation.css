@@ -3,7 +3,9 @@
     flex-direction: column;
     background-color: #583F3A;
     color: #FFFF;
-    width: 100px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
     align-items: center;
     border-radius: 20px;
     padding: 10px 5px;
@@ -12,13 +14,13 @@
 }
 
 .profile-photo {
-    height: 40px;
-    width: 40px;
+    height: 60%;
+    width: 60%;
 }
 
 .user-name {
     display: block;
-    font-size: 10px;
+    font-size: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
