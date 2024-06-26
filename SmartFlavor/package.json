@@ -21,6 +21,7 @@
     "@capacitor/ios": "6.1.0",
     "@capacitor/keyboard": "6.0.0",
     "@capacitor/status-bar": "6.0.0",
+    "@ionic-native/flashlight": "^5.36.0",
     "@ionic-native/keyboard": "^5.36.0",
     "@ionic/react": "^8.0.0",
     "@ionic/react-router": "^8.0.0",
@@ -30,6 +31,7 @@
     "ionicons": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-native-torch": "^1.2.0",
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4"
   },
