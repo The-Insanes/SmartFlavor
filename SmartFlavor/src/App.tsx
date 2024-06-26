@@ -35,6 +35,8 @@ import Login from './pages/login/Login';
 import Main from './pages/main/user/Main';
 import Profile from './pages/profile/Profile';
 import Camera from './pages/camera/Camera';
+import AdminMain from './pages/main/admin/AdminMain';
+import RecommendRecipe from './pages/recommend-recipe/RecommendRecipe';
 
 setupIonicReact();
 
@@ -43,7 +45,7 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/home">
-          <Camera />
+          <RecommendRecipe />
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />
