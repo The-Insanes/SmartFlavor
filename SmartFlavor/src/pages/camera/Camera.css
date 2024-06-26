@@ -30,8 +30,8 @@ ion-content {
 
 .galery {
     padding: 4px;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     background-color: #FFF;
     border-radius: 20px;
 }
@@ -55,7 +55,7 @@ ion-content {
 }
 
 .camera-icon {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .under-interact {
@@ -67,10 +67,10 @@ ion-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
-    border: 7px solid #FFF;
+    border: 5px solid #FFF;
 
 }
 
