@@ -4,6 +4,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Search from './pages/search/Search';
+import EditProfile from './pages/editprofile/Editprofile';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,6 +34,7 @@ const App: React.FC = () => (
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/search" component={Search} />
+        <Route exact path="/editprofile" component={EditProfile} />
         <Route exact path="/">
           <Redirect to="/login" />
         </Route>

@@ -26,9 +26,11 @@ const EditProfileContainer: React.FC = () => {
   };
 
   const handleConfirmChanges = () => {
-    // Aquí podrías implementar la lógica para confirmar los cambios
-    console.log("Cambios confirmados:", nombreValue, usuarioValue, presentacionValue, sexoValue);
-    // Por ejemplo, podrías enviar los datos actualizados al servidor o realizar otras operaciones necesarias
+    // Simulación de la actualización del perfil en el backend
+    setTimeout(() => {
+      console.log("Cambios confirmados:", nombreValue, usuarioValue, presentacionValue, sexoValue);
+      alert("Perfil actualizado exitosamente");
+    }, 1000);
   };
 
   return (
@@ -56,5 +58,3 @@ const EditProfileContainer: React.FC = () => {
 };
 
 export default EditProfileContainer;
-
-
