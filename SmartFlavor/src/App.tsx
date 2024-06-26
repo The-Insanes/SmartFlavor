@@ -5,6 +5,7 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Search from './pages/search/Search';
 import EditProfile from './pages/editprofile/Editprofile';
+import ReportPost from './pages/reportpost/ReportPost';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -35,6 +36,7 @@ const App: React.FC = () => (
         <Route exact path="/register" component={Register} />
         <Route exact path="/search" component={Search} />
         <Route exact path="/editprofile" component={EditProfile} />
+        <Route exact path="/reportpost" component={ReportPost} />
         <Route exact path="/">
           <Redirect to="/login" />
         </Route>

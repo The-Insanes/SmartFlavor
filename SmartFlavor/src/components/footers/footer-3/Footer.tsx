@@ -9,7 +9,7 @@ interface ContainerProps {
 const Footer: React.FC<ContainerProps> = (props) => {
     return (
         <div className={props.className}>
-            <div className="footer-container">
+            <div className="footer-container-admin">
                 <IonLabel className="footer-title">SmartFlavor Administrator</IonLabel>
                 <IonLabel>
                     En este sitio se podrán gestionar los 

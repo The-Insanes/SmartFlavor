@@ -67,4 +67,17 @@
     border-radius: 50%;
     margin-right: 10px;
   }
+  .recipe-container.report-page {
+    background-color: #5A464C; /* Color de fondo diferente para la página de reporte */
+  }
   
+  .view-more-button.report-page {
+    color: red; /* Color del botón de "Ver más" en la página de reporte */
+  }
+  .recipe-header.report-page {
+    color: #FF6930; /* Cambia el color de las letras a #FF6930 */
+  }
+  .recipe-footer.report-page {
+    color: #FF6930; /* Cambia el color de las letras a #FF6930 */
+  }
+    

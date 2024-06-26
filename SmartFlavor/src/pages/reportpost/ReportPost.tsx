@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { IonPage, IonContent, IonInfiniteScroll, IonInfiniteScrollContent } from '@ionic/react';
 import Header from '../../components/header-interact/Header';
+import RecipeContainer from '../../components/recipe-container/recipe-container';
+import Footer from '../../components/footers/footer-3/Footer';
 import SearchBar from '../../components/search-bar/SearchBar';
-import RecipeContainer from "../../components/recipe-container/recipe-container";
-import Footer from '../../components/footers/footer-1/Footer';
 
-// Datos simulados de recetas
 const allRecipes = [
   {
     id: 1,
@@ -42,7 +41,7 @@ const allRecipes = [
 
 const ITEMS_PER_PAGE = 2; // Define cuántas recetas cargar por página
 
-const Search: React.FC = () => {
+const ReportPost: React.FC = () => {
   const [recipes, setRecipes] = useState(allRecipes.slice(0, ITEMS_PER_PAGE));
   const [page, setPage] = useState(1);
 
@@ -65,17 +64,17 @@ const Search: React.FC = () => {
     <IonPage>
       <Header />
       <IonContent style={{ '--ion-background-color': '#FFEFBD' }}>
-        <SearchBar />
-        {recipes.map((recipe) => (
-          <RecipeContainer key={recipe.id} recipe={recipe} />
+       <SearchBar />
+        {recipes.map(recipe => (
+          <RecipeContainer key={recipe.id} recipe={recipe} isReportPage={true} />
         ))}
         <IonInfiniteScroll onIonInfinite={loadMoreRecipes}>
           <IonInfiniteScrollContent loadingText="Cargando más recetas..."></IonInfiniteScrollContent>
         </IonInfiniteScroll>
       </IonContent>
-      <Footer />
+      <Footer className="footer" />
     </IonPage>
   );
 };
 
-export default Search;
+export default ReportPost;

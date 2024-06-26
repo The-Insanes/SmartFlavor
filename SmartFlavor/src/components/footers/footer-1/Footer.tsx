@@ -7,11 +7,6 @@ interface ContainerProps {
 }
 
 const Footer: React.FC<ContainerProps> = (props) => {
-    const history = useHistory();
-
-    const navigateToProfile = () => {
-        history.push('/editprofile'); // Asegúrate de que esta ruta exista en tu enrutador
-    };
 
     return (
         <div className={props.className}>
@@ -32,7 +27,7 @@ const Footer: React.FC<ContainerProps> = (props) => {
                     <IonImg className="footer-icon" src="images/smartflavor/message.svg"></IonImg>
                 </IonButton>
 
-                <IonButton fill="clear" size="small" onClick={navigateToProfile}>
+                <IonButton fill="clear" size="small" >
                     <IonImg className="footer-icon" src="images/smartflavor/default_profile_icon.svg"></IonImg>
                 </IonButton>
             </div>
