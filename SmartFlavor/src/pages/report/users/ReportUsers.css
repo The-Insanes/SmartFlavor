@@ -1,0 +1,32 @@
+ion-content {
+    --ion-background-color: #FFEFBD;
+}
+
+.center-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+}
+
+.search-bar-admin {
+    width: 80%;
+}
+
+.users-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-reported-option {
+
+}
+
+.show-more-button {
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+}
