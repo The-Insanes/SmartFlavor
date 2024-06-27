@@ -1,0 +1,39 @@
+ion-content {
+    --ion-background-color: #FFEFBD;
+}
+
+
+.center-page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    gap: 10px;
+}
+
+.search-bar-page {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-bar-component {
+    width: 90%;
+}
+
+.recipes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px
+}
+
+.welcome-message {
+    display: flex;
+    justify-content: center;
+}
+
+.recommend-recipe-container {
+    width: 75%;
+}
