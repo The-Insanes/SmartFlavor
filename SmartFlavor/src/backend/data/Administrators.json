@@ -1,0 +1,26 @@
+[
+  {
+    "id_administrator": "admin_001",
+    "name": "Carlos Mendoza",
+    "email": "carlos@example.com",
+    "password": "adminpass123",
+    "rut": "12345678-9",
+    "reports": ["report_001", "report_003"]
+  },
+  {
+    "id_administrator": "admin_002",
+    "name": "Lucía Martínez",
+    "email": "lucia@example.com",
+    "password": "adminpass456",
+    "rut": "98765432-1",
+    "reports": ["report_002", "report_004"]
+  },
+  {
+    "id_administrator": "admin_003",
+    "name": "Ricardo González",
+    "email": "ricardo@example.com",
+    "password": "adminpass789",
+    "rut": "11223344-5",
+    "reports": ["report_005"]
+  }
+]
