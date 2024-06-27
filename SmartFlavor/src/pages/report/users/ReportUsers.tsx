@@ -4,6 +4,7 @@ import Header from "../../../components/header-interact/Header";
 import SearchBar from "../../../components/search-bar/SearchBar";
 import { useEffect, useState } from "react";
 import ProfileContainer from "../../../components/profile-container/ProfileContainer";
+import Footer from "../../../components/footers/footer-3/Footer";
 
 interface User {
     user_name: string,
@@ -55,12 +56,16 @@ const ReportUsers: React.FC = () =>{
                         <div className="user-reported-option">
                             <ProfileContainer user_name={user.user_name} post_num={user.num_post} follow_num={user.followers} following_num={user.following} profile_photo={user.profile_photo} description={user.description} view_edit={false} key={index}/>
                         
-                            <IonButton className="show-more-button">
+                            <IonButton className="show-more-button" fill="clear" color="light" size="small">
                                 <IonLabel>+ Ver detalles</IonLabel>
                             </IonButton>
                         </div>
                     ))}
                     </div>
+
+                    <div slot="end">
+                    <Footer/>
+                </div>
                 </div>
             </IonContent>
         </IonPage>

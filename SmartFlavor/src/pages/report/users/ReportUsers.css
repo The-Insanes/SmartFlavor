@@ -6,7 +6,7 @@ ion-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 10px;
+    padding-top: 15px;
     gap: 10px;
 }
 
@@ -20,13 +20,17 @@ ion-content {
     gap: 10px;
 }
 
-.user-reported-option {
-
-}
-
 .show-more-button {
-    --padding-start: 0px;
-    --padding-end: 0px;
-    --padding-top: 0px;
-    --padding-bottom: 0px;
+    --padding-start: 5px;
+    --padding-end: 5px;
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+    --border-radius: 20px;
+    font-size: 10px;
+    border-radius: 20px;
+    background-color: #583F3A;
+
+    >ion-label {
+        color: red;
+    }
 }
