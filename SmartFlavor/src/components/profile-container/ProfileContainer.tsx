@@ -3,7 +3,8 @@ import { colorPalette, pencil } from "ionicons/icons";
 import "./ProfileContainer.css"
 
 interface ContainerProps {
-    className?: string | undefined
+    className?: string | undefined,
+    view_edit?: boolean | undefined,
     user_name: string,
     post_num: number,
     follow_num: number,
@@ -45,12 +46,14 @@ const ProfileContainer: React.FC<ContainerProps> = (props) => {
                                     </div>
                                 </div>
                                 
+                                {props.view_edit &&
                                 <div className="button-cotainer">
                                     <IonButton className="profile-option" size="small" fill="clear">
                                         <IonIcon icon={colorPalette}></IonIcon>
                                         <IonIcon icon={pencil}></IonIcon>
                                     </IonButton>
                                 </div>
+                                }
                             </div>
                         </div>
                     </div>
