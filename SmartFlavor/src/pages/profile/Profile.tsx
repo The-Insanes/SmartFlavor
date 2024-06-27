@@ -37,7 +37,7 @@ const Profile: React.FC = () => {
 
             <IonContent className="center-page" fullscreen>
                 <div className="center-page">
-                    <ProfileContainer className="user-info" user_name={"Chef Ruperto"} post_num={23} follow_num={321} following_num={999} profile_photo={"images/profile_photos/chef 1.jpg"} description={"Me culie un mono 🤑🤑 y con el sebas 👻"}/>
+                    <ProfileContainer className="user-info" user_name={"Chef Ruperto"} post_num={23} follow_num={321} following_num={999} profile_photo={"images/profile_photos/chef 1.jpg"} description={"Me culie un mono 🤑🤑 y con el sebas 👻"} view_edit={true}/>
 
                     <div className="interact-section">
                         <IonButton className="interact-post-button" fill="clear" size="small" color="light">
