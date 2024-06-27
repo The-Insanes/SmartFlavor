@@ -1,0 +1,11 @@
+ion-content {
+    --ion-background-color: #5A464C;
+}
+
+.center-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
