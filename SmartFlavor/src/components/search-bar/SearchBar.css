@@ -1,10 +1,12 @@
 .search-bar {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #5A464C;
     width: 100%;
     border-radius: 20px;
     color: #FFFF;
+    margin: 0 auto; 
 }
 
 .search-bar-button {

@@ -1,6 +1,12 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Search from './pages/search/Search';
+import EditProfile from './pages/editprofile/Editprofile';
+import ReportPost from './pages/reportpost/ReportPost';
+import ReportUsers from './pages/report/users/ReportUsers';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -18,27 +24,8 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-/*import '@ionic/react/css/palettes/dark.system.css'; */
-
 /* Theme variables */
 import './theme/variables.css';
-import Login from './pages/login/Login';
-import Main from './pages/main/user/Main';
-import Profile from './pages/profile/Profile';
-import Camera from './pages/camera/Camera';
-import AdminMain from './pages/main/admin/AdminMain';
-import RecommendRecipe from './pages/recommend-recipe/RecommendRecipe';
-import LoadPage from './pages/load-page/LoadPage';
-import ReportUsers from './pages/report/users/ReportUsers';
 
 setupIonicReact();
 
@@ -50,7 +37,7 @@ const App: React.FC = () => (
           <ReportUsers />
         </Route>
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/login" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

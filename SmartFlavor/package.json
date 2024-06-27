@@ -1,5 +1,5 @@
 {
-  "name": "SmartFlavor",
+  "name": "smartflavor",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -54,5 +54,8 @@
     "vite": "^5.0.0",
     "vitest": "^0.34.6"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "main": ".eslintrc.js",
+  "author": "",
+  "license": "ISC"
 }
