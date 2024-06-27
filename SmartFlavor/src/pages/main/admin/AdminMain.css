@@ -1,0 +1,32 @@
+ion-content {
+    --ion-background-color: #FFEFBD;
+}
+
+.welcome-admin {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.center-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-page {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    gap: 5px;
+}
+
+.search-admin-bar {
+    width: 90%;
+}
+
+.div123nd {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background-color: #583F3A;
+    color: #FFFF;
+    padding: 10px 15px;
+    border-radius: 20px;
+    width: 100%;
+}

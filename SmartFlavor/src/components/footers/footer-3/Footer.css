@@ -1,0 +1,33 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5A464C;
+    font-size: 15px;
+    color: #FFFF;
+    padding: 10px 15px;
+    width: 100%;
+    gap: 10px;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.smartflavor-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 7%;
+}
+
+.social-network {
+    --padding-start: 0px;
+    --padding-end: 0px;
+
+    width: 50px;
+}

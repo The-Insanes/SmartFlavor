@@ -1,0 +1,10 @@
+.footer-icon {
+    font-size: 5px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #5A464C;
+}
