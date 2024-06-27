@@ -12,14 +12,18 @@ const allRecipes = [
     title: 'Receta 1',
     userImage: 'https://www.escoffier.edu/wp-content/uploads/2022/03/Chef-in-uniform-posing-for-a-photo-in-a-kitchen-1400.jpg',
     recipeImage: 'https://www.elmueble.com/medio/2024/02/23/pollo-curry-manzana_012ed92b_00535188_240223081823_900x900.jpg',
-    userName: 'Usuario 1'
+    userName: 'Usuario 1',
+    likes: 23,
+    description: 'Delicious curry with apple'
   },
   {
     id: 2,
     title: 'Receta 2',
     userImage: 'https://www.escoffier.edu/wp-content/uploads/2022/03/Chef-in-uniform-posing-for-a-photo-in-a-kitchen-1400.jpg',
     recipeImage: 'https://www.elmueble.com/medio/2024/02/23/pollo-curry-manzana_012ed92b_00535188_240223081823_900x900.jpg',
-    userName: 'Usuario 2'
+    userName: 'Usuario 2',
+    likes: 23,
+    description: 'Delicious curry with apple'
   },
   // Añade más recetas según sea necesario
   // Simula más recetas para probar el desplazamiento infinito
@@ -28,14 +32,18 @@ const allRecipes = [
     title: 'Receta 3',
     userImage: 'https://www.escoffier.edu/wp-content/uploads/2022/03/Chef-in-uniform-posing-for-a-photo-in-a-kitchen-1400.jpg',
     recipeImage: 'https://www.elmueble.com/medio/2024/02/23/pollo-curry-manzana_012ed92b_00535188_240223081823_900x900.jpg',
-    userName: 'Usuario 3'
+    userName: 'Usuario 3,',    
+    likes: 23,
+    description: 'Delicious curry with apple'
   },
   {
     id: 4,
     title: 'Receta 4',
     userImage: 'https://www.escoffier.edu/wp-content/uploads/2022/03/Chef-in-uniform-posing-for-a-photo-in-a-kitchen-1400.jpg',
     recipeImage: 'https://www.elmueble.com/medio/2024/02/23/pollo-curry-manzana_012ed92b_00535188_240223081823_900x900.jpg',
-    userName: 'Usuario 4'
+    userName: 'Usuario 4',    
+    likes: 23,
+    description: 'Delicious curry with apple'
   },
   // Continúa añadiendo más recetas si es necesario
 ];

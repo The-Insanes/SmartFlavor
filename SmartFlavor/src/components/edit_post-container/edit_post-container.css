@@ -1,126 +1,158 @@
-.edit-post-container {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    background: #5A464C;
-    border-radius: 20px;
-    border: 5px black solid;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    display: inline-flex;
-  }
-  
-  .edit-info-section {
-    padding-left: 10px;
-    padding-right: 10px;
-    background: #E3CECE;
-    border-radius: 15px;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    display: inline-flex;
-  }
-  
-  .edit-info-title {
-    color: black;
-    font-size: 17px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    line-height: 22px;
-    word-wrap: break-word;
-  }
-  
-  .content-section {
-    background: #5A464C;
-    border-radius: 10px;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
-    display: inline-flex;
-  }
-  
-  .content-left {
-    padding-bottom: 13px;
-    background: #E3CECE;
-    border-radius: 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
-  }
-  
-  .edit-input {
-    color: black;
-    font-size: 14px;
-    font-family: Inter;
-    font-weight: 400;
-    word-wrap: break-word;
-    background: #E3CECE;
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    margin-top: 5px;
-  }
-  
-  .separator {
-    width: 206.01px;
-    height: 0px;
-    border: 1px #F87666 solid;
-  }
-  
-  .content-right {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 11px;
-    display: inline-flex;
-  }
-  
-  .content-image {
-    width: 54px;
-    height: 96px;
-    padding: 20px;
-    border: 1px black solid;
-  }
-  
+.custom-modal {
+  --background: #5A464C;
+  --border-radius: 20px;
+  padding: 20px;
+  max-width: 90%;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
-  .like-count {
-    color: white;
-    font-size: 14px;
-    font-family: Inter;
-    font-weight: 400;
-    word-wrap: break-word;
-  }
-  
-  .action-buttons {
-    background: #E3CECE;
-    border-radius: 10px;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 155px;
-    display: inline-flex;
-    height: 69px;
-  }
-  
-  .custom-ion-button {
-    --background: transparent !important;
-    --color: inherit !important;
-    --border-radius: inherit !important;
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    padding: 0;
-  }
-  
-  .custom-ion-button img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .custom-ion-button:hover {
-    background-color: transparent !important;
-  }
-  
+.edit-post-container {
+  width: 100%;
+  padding: 20px;
+  background: #5A464C;
+  border-radius: 20px 20px 0 0;
+  border: 5px black solid;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 60%; /* Para limitar la altura y permitir el desplazamiento si es necesario */
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.edit-info-section {
+  padding: 10px;
+  background: #E3CECE;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.edit-info-title {
+  color: black;
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  word-wrap: break-word;
+}
+
+.content-section {
+  background: #5A464C;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px; /* Añade espacio para la sección de editar información */
+}
+
+.content-left {
+  padding-bottom: 13px;
+  background: #E3CECE;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 20px;
+}
+
+.edit-input {
+  color: black;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+  background: #E3CECE;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  border: 1px #F87666 solid;
+}
+
+.content-right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  display: none;
+}
+
+.content-image {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border: 1px black solid;
+  margin-bottom: 10px;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+}
+
+.like-count {
+  color: white;
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.action-buttons {
+  background: #E3CECE;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  height: 69px;
+  margin-top: 20px;
+}
+
+.custom-ion-button {
+  --background: transparent !important;
+  --color: inherit !important;
+  --border-radius: inherit !important;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  padding: 0;
+}
+
+.custom-ion-button img {
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-ion-button:hover {
+  background-color: transparent !important;
+}
+
+.ion-page ion-modal {
+  --background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+}
