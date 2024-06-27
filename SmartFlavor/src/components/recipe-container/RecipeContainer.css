@@ -8,7 +8,7 @@
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     gap: 10px;
-    width: 80%;
+    width: 100%;
 }
 
 .top-recipe-container {
@@ -50,4 +50,10 @@
     --padding-top: 0px;
     --padding-bottom: 0px;
     font-size: 20px;
+}
+
+.show-more-button {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
 }
