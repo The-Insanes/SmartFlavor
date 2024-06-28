@@ -1,0 +1,42 @@
+[
+  {
+    "id_report": "report_001",
+    "description": "Contenido inapropiado en la receta.",
+    "id_user": "user_005",
+    "id_post": "post_002",
+    "date": "2024-06-06T10:30:00Z",
+    "status": "En revision"
+  },
+  {
+    "id_report": "report_002",
+    "description": "La receta no está completa.",
+    "id_user": "user_003",
+    "id_post": "post_003",
+    "date": "2024-06-07T11:00:00Z",
+    "status": "Sin revisar"
+  },
+  {
+    "id_report": "report_003",
+    "description": "Duplicado de receta.",
+    "id_user": "user_002",
+    "id_post": "post_004",
+    "date": "2024-06-08T12:00:00Z",
+    "status": "Finalizado"
+  },
+  {
+    "id_report": "report_004",
+    "description": "La receta tiene ingredientes faltantes.",
+    "id_user": "user_001",
+    "id_post": "post_005",
+    "date": "2024-06-09T13:00:00Z",
+    "status": "Sin revisar"
+  },
+  {
+    "id_report": "report_005",
+    "description": "La descripción es engañosa.",
+    "id_user": "user_004",
+    "id_post": "post_001",
+    "date": "2024-06-10T14:00:00Z",
+    "status": "En revision"
+  }
+]
