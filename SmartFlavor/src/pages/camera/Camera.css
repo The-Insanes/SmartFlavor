@@ -1,6 +1,7 @@
-ion-content {
+
+.ion-content {
     --background: transparent;
-    padding: 10px
+    padding: 10px;
 }
 
 .camera-interaction {
@@ -16,7 +17,6 @@ ion-content {
     flex-direction: column;
     width: 100%;
 }
-
 
 .first-buttons {
     display: flex;
@@ -71,7 +71,6 @@ ion-content {
     height: 70px;
     border-radius: 100%;
     border: 5px solid #FFF;
-
 }
 
 .circle-2 {
@@ -79,4 +78,12 @@ ion-content {
     height: 80%;
     border-radius: 100%;
     background-color: #FFF;
+}
+
+.is-recording .circle-1 {
+    border-color: red;
+}
+
+.is-recording .circle-2 {
+    background-color: red;
 }

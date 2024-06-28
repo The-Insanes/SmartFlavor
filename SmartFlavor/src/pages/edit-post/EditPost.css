@@ -1,0 +1,43 @@
+/* 
+description
+ingredients
+Eliminar
+*/
+
+.a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+}
+
+.b {
+    background-color: aqua;
+    border-radius: 20px;
+    height: 90%;
+    width: 100%;
+}
+
+.c {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.c-1 {
+    background-color: black;
+    height: 100px;
+    width: 60%;
+}
+
+.c-2 {
+    background-color: black;
+    height: 100px;
+    width: 60%;
+}

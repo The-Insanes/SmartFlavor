@@ -1,16 +1,13 @@
-import "./Main.css"
+import React, { useState, useRef, useEffect } from "react";
 import { IonButton, IonContent, IonFooter, IonHeader, IonIcon, IonPage } from "@ionic/react";
-import { bookmark, chatbubbleSharp, heart, notifications, paperPlane, save } from "ionicons/icons"; 
+import { bookmark, chatbubbleSharp, heart, notifications, paperPlane } from "ionicons/icons"; 
+import { useInView } from 'react-intersection-observer';
 import Header from "../../../components/header-interact/Header";
 import Footer from "../../../components/footers/footer-1/Footer";
-import { useState } from "react";
 import CommentSection from "../../../components/comment/comment-section/CommentSection";
 import ReportContainer from "../../../components/report/container/ReportContainer";
 import SendPublication from "../../../components/send-publication/SendPublication";
-
-interface CommentConfig {
-    view_comments: boolean,
-}
+import "./Main.css"
 
 const generate_users = () => {
     const users = []
@@ -51,6 +48,13 @@ const Main: React.FC = () => {
     const [viewComment, setViewComment] = useState<boolean>(false);
     const [viewReport, setViewReport] = useState<boolean>(false);
     const [viewSendPost, setViewSendPost] = useState<boolean>(false);
+    const [videos, setVideos] = useState<string[]>(["videos/Download.mp4"]); // Lista de videos
+    const videoIndex = useRef<number>(0);
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+    const { ref, inView } = useInView({
+        threshold: 1.0,
+    });
 
     const view_send_post = () => {
         setViewSendPost(!viewSendPost);
@@ -72,6 +76,19 @@ const Main: React.FC = () => {
         setSaved(!saved);
     }
 
+    useEffect(() => {
+        if (inView && videoIndex.current < videos.length - 1) {
+            videoIndex.current += 1;
+            setVideos([...videos, `videos/Download${videoIndex.current}.mp4`]);
+        }
+    }, [inView, videos]);
+
+    useEffect(() => {
+        if (inView && videoRefs.current[videoIndex.current]) {
+            videoRefs.current[videoIndex.current]?.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [videos]);
+
     return (
         <IonPage>
             <IonHeader>
@@ -79,11 +96,25 @@ const Main: React.FC = () => {
             </IonHeader>
 
             <IonContent fullscreen>
-                <div className="center-page">
-                    <video className="video-main" loop autoPlay muted>
-                        <source src="videos/Download.mp4" type="video/mp4"></source>
-                        El navegador que estás utilizando no acepta HTML5
-                    </video>
+                <div className="center-page-main">
+                    {videos.map((videoSrc, index) => (
+                        <video 
+                            key={index} 
+                            className="video-main" 
+                            loop 
+                            autoPlay 
+                            muted 
+                            ref={el => videoRefs.current[index] = el} 
+                            onEnded={() => {
+                                if (index === videoIndex.current && videoRefs.current[index + 1]) {
+                                    videoRefs.current[index + 1]?.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}
+                        >
+                            <source src={videoSrc} type="video/mp4"></source>
+                            El navegador que estás utilizando no acepta HTML5
+                        </video>
+                    ))}
 
                     <div className="page-content" style={(viewComment || viewReport || viewSendPost)? {background: "black", opacity: "0.7"} : {}}>
                         <div className="report-div">
@@ -127,7 +158,8 @@ const Main: React.FC = () => {
                         className={`send-post-${viewSendPost? "visible" : "hidden"}`} 
                         users={generate_users()} 
                         close={view_send_post} 
-                        view={viewSendPost}/>
+                        view={viewSendPost}
+                        owner_user={{user_name: "tu mamá", profile_photo: "images/profile_photos/chef 1.jpg"}}/>
                 </div>
             </IonContent>
         </IonPage>

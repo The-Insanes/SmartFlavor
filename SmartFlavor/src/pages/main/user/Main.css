@@ -1,4 +1,4 @@
-.center-page {
+.center-page-main {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -98,7 +98,7 @@
     position: absolute;
     transition: height 0.3s ease;
     height: 0%;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     overflow: auto;
 }
@@ -106,8 +106,8 @@
 .send-post-visible {
     position: absolute;
     transition: height 0.3s ease;
-    height: 80%;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
+    height: 50%;
     overflow: auto;
 }

@@ -1,14 +1,17 @@
 import { IonButton, IonContent, IonFooter, IonHeader, IonIcon, IonLabel, IonPage } from "@ionic/react";
-import { CameraPreview, CameraPreviewPictureOptions, CameraPreviewOptions } from '@capacitor-community/camera-preview';
+import { CameraPreview, CameraPreviewOptions } from '@capacitor-community/camera-preview';
 import "./Camera.css";
-import { useEffect, useRef, useState } from "react";
-import { arrowBack, colorWand, flashlight, flashOff, flashSharp, reloadSharp } from "ionicons/icons";
-import { Flashlight } from '@ionic-native/flashlight';
+import { useEffect, useState, useRef } from "react";
+import { arrowBack, colorWand, flashOff, flashSharp, reloadSharp } from "ionicons/icons";
+import { Redirect } from "react-router";
 
 const Camera: React.FC = () => {
     const [flash, setFlash] = useState<boolean>(false);
     const [position, setPosition] = useState<string>('rear');
     const [videoData, setVideoData] = useState<any>();
+    const [isRecording, setIsRecording] = useState<boolean>(false);
+    const [regresar, setRegresar] = useState<boolean>(false);
+    const recordTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         startCamera();
@@ -36,7 +39,6 @@ const Camera: React.FC = () => {
     };
   
     const takePicture = async () => {
-        
       const result = await CameraPreview.capture({
         quality: 85
       });
@@ -46,53 +48,65 @@ const Camera: React.FC = () => {
 
     const toggleFlash = async () => {
         setFlash(!flash);
-
-        await CameraPreview.setFlashMode({flashMode: `${flash? 'on' : 'off'}`});
+        await CameraPreview.setFlashMode({ flashMode: flash ? 'off' : 'on' });
     };
 
-    const recordVideo = async () => {
+    const startRecordVideo = async () => {
+        setIsRecording(true);
         const cameraOptions: CameraPreviewOptions = {
             position: position,
             width: window.screen.width,
             height: window.screen.height
         };
-        
         await CameraPreview.startRecordVideo(cameraOptions);
-    }
+    };
 
-    const stopRecord = async () => {
+    const stopRecordVideo = async () => {
         const resultRecordVideo = await CameraPreview.stopRecordVideo();
         setVideoData(resultRecordVideo);
-
-    }
+        setIsRecording(false);
+    };
 
     const switchCamera = async () => {
         await CameraPreview.flip();
+        setPosition(position === 'rear' ? 'front' : 'rear');
+    };
 
-        if(position === 'rear') {
-            setPosition('front');
+    const handleCaptureButtonMouseDown = () => {
+        recordTimeoutRef.current = setTimeout(() => {
+            startRecordVideo();
+        }, 1000);
+    };
+
+    const handleCaptureButtonMouseUp = () => {
+        if (recordTimeoutRef.current) {
+            clearTimeout(recordTimeoutRef.current);
+            recordTimeoutRef.current = null;
         }
-        else {
-            setPosition('rear');
+
+        if (isRecording) {
+            stopRecordVideo();
+        } else {
+            takePicture();
         }
     };
-    
 
-    return(
+    return (
         <IonPage>
             <IonHeader></IonHeader>
             
             <IonContent id="cameraPreview" className="cameraPreview" fullscreen>
+                {regresar && <Redirect to="/user-home"></Redirect>}
                 <div className="camera-interaction">
                     <div className="top-interactions">
                         <div className="first-buttons">
-                            <IonButton className="camera-button" fill="clear" color="light">
+                            <IonButton className="camera-button" fill="clear" color="light" onClick={(e) => {setRegresar(!regresar)}}>
                                 <IonIcon className="camera-icon" icon={arrowBack}></IonIcon>
                             </IonButton>
 
-                            <IonButton className="camera-button" fill="clear" color="light">
+                            <IonButton className="camera-button" fill="clear" color="light" onClick={switchCamera}>
                                 <div>
-                                    <IonIcon className="camera-icon" icon={reloadSharp} onClick={switchCamera}></IonIcon>
+                                    <IonIcon className="camera-icon" icon={reloadSharp}></IonIcon>
                                     <IonLabel>Girar</IonLabel>
                                 </div>
                             </IonButton>
@@ -101,11 +115,11 @@ const Camera: React.FC = () => {
                         <div className="second-buttons">
                             <IonButton className="camera-button" fill="clear" color="light" onClick={toggleFlash}>
                                 <div>
-                                    {flash?
+                                    {flash ? (
                                         <IonIcon className="camera-icon" icon={flashSharp}></IonIcon>
-                                        :
+                                    ) : (
                                         <IonIcon className="camera-icon" icon={flashOff}></IonIcon>
-                                    }
+                                    )}
                                     <IonLabel>Flash</IonLabel>
                                 </div>
                             </IonButton>
@@ -118,13 +132,19 @@ const Camera: React.FC = () => {
                         <IonButton className="camera-button" fill="clear" color="light">
                             <div>
                                 <div className="galery">
-                                    <img src="images/thumbnails/post_1.jpeg"></img>
+                                    <img src="images/thumbnails/post_1.jpeg" alt="thumbnail"></img>
                                 </div>
                                 <IonLabel>Cargar</IonLabel>
                             </div>
                         </IonButton>
 
-                        <IonButton className="camera-button" fill="clear" color="light" onClick={takePicture} onTouchStart={recordVideo} onTouchEnd={stopRecord}>
+                        <IonButton 
+                            className={`camera-button ${isRecording ? 'is-recording' : ''}`} 
+                            fill="clear" 
+                            color="light" 
+                            onMouseDown={handleCaptureButtonMouseDown} 
+                            onMouseUp={handleCaptureButtonMouseUp}
+                        >
                             <div className="circle-1">
                                 <div className="circle-2"></div>
                             </div>
@@ -143,6 +163,6 @@ const Camera: React.FC = () => {
             <IonFooter></IonFooter>
         </IonPage>
     );
-}
+};
 
 export default Camera;
