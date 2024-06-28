@@ -1,0 +1,37 @@
+[
+  {
+    "id_comment": "comment_001",
+    "description": "¡Me encantó esta receta! Fácil de seguir y deliciosa.",
+    "id_user": "user_002",
+    "date": "2024-06-11T15:00:00Z",
+    "num_likes": 15
+  },
+  {
+    "id_comment": "comment_002",
+    "description": "Esta receta es perfecta para una cena rápida.",
+    "id_user": "user_003",
+    "date": "2024-06-12T16:00:00Z",
+    "num_likes": 10
+  },
+  {
+    "id_comment": "comment_003",
+    "description": "¡Los pancakes quedaron deliciosos!",
+    "id_user": "user_001",
+    "date": "2024-06-13T17:00:00Z",
+    "num_likes": 20
+  },
+  {
+    "id_comment": "comment_004",
+    "description": "Esta sopa de lentejas es mi nueva favorita.",
+    "id_user": "user_004",
+    "date": "2024-06-14T18:00:00Z",
+    "num_likes": 18
+  },
+  {
+    "id_comment": "comment_005",
+    "description": "La ensalada César quedó increíble.",
+    "id_user": "user_005",
+    "date": "2024-06-15T19:00:00Z",
+    "num_likes": 12
+  }
+]

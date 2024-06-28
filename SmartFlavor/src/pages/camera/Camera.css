@@ -1,0 +1,89 @@
+
+.ion-content {
+    --background: transparent;
+    padding: 10px;
+}
+
+.camera-interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%; /* Asegura que los controles cubran toda el área de la cámara */
+}
+
+.top-interactions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.first-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.galery {
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+    border-radius: 20px;
+}
+
+.galery > img {
+    border-radius: 20px;
+}
+
+.camera-button {
+    --padding-start: 5px;
+    --padding-end: 5px;
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+}
+
+.camera-button > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.camera-icon {
+    font-size: 30px;
+}
+
+.under-interact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 5px solid #FFF;
+}
+
+.circle-2 {
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    background-color: #FFF;
+}
+
+.is-recording .circle-1 {
+    border-color: red;
+}
+
+.is-recording .circle-2 {
+    background-color: red;
+}

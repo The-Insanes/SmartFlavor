@@ -1,0 +1,113 @@
+.center-page-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.video-main {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.page-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.report-div {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+}
+
+.report-icon { 
+    font-size: 25px;
+    color: red;
+}
+
+.under-interaction {
+    width: 100%;
+}
+
+.video-interactions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.video-option {
+    width: fit-content;
+}
+
+.icon-option {
+    font-size: 30px;
+    color: #FFFF;
+}
+
+.post-comments-hidden {
+    position: absolute;
+    transition: height 0.3s ease;
+    bottom: 0px;
+    width: 100%;
+    height: 0%;
+    overflow: auto;
+}
+
+.post-comments-visible {
+    position: absolute;
+    transition: height 0.4s ease;
+    bottom: 0%;
+    width: 100%;
+    height: 80%;
+}
+
+.report-hidden {
+    position: absolute;
+    transition: height 0.3s ease;
+    height: 0%;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+.report-visible {
+    position: absolute;
+    transition: height 0.3s ease;
+    height: 80%;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+.send-post-hidden {
+    position: absolute;
+    transition: height 0.3s ease;
+    height: 0%;
+    bottom: 0px;
+    width: 100%;
+    overflow: auto;
+}
+
+.send-post-visible {
+    position: absolute;
+    transition: height 0.3s ease;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+    overflow: auto;
+}

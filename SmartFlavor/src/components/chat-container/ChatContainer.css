@@ -1,0 +1,14 @@
+.chat-container {
+    display: inline-flex;
+    flex-direction: row;
+    color: #583F3A;
+    gap: 10px;
+}
+
+.chat-info {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}

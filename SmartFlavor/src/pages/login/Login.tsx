@@ -1,19 +1,25 @@
-import { IonContent, IonFooter, IonPage } from "@ionic/react";
-import "./Login.css"
+import React from 'react';
+import { IonContent, IonPage } from '@ionic/react';
+import { useHistory } from 'react-router-dom';
+import LoginContainer from '../../components/login-container/login-container';
+import Footer from '../../components/footers/footer-2/Footer';
+import "./Login.css";
 
 const Login: React.FC = () => {
-    return(
+  const history = useHistory();
+  
+  const handleRegisterNavigation = () => {
+    history.push('/register');
+  };
+
+  return (
     <IonPage>
-    <IonContent className='fondo-singup'>
-      <div className='centered-content-singup'>
-      </div>
-    </IonContent>
-
-    <IonFooter translucent={true}>
-    </IonFooter>
+      <IonContent style={{ '--ion-background-color': '#FFEFBD' }}>
+        <LoginContainer onRegisterClick={handleRegisterNavigation} />
+        <Footer/>
+      </IonContent>
     </IonPage>
-    );
+  );
 };
-
 
 export default Login;

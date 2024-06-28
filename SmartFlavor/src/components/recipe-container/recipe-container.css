@@ -1,0 +1,83 @@
+.recipe-container {
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background: #BD897E;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .recipe-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 400;
+    gap: 110px;
+    color: black;
+  }
+  
+  .heart-button {
+    padding: 0;
+    margin: 0;
+  }
+  .heart-icon {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #5A464C;
+    color: #5A464C;
+    border-radius: 50%;
+  }
+  
+  .recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .recipe-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 400;
+    color: black;
+  }
+  
+  .view-more-button {
+    font-size: 12px;
+    font-family: Inter;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .recipe-container.report-page {
+    background-color: #5A464C; /* Color de fondo diferente para la página de reporte */
+  }
+  
+  .view-more-button.report-page {
+    color: red; /* Color del botón de "Ver más" en la página de reporte */
+  }
+  .recipe-header.report-page {
+    color: #FF6930; /* Cambia el color de las letras a #FF6930 */
+  }
+  .recipe-footer.report-page {
+    color: #FF6930; /* Cambia el color de las letras a #FF6930 */
+  }
+    

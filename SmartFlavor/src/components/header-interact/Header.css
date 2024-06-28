@@ -1,0 +1,22 @@
+.header-container {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    background-color: #5A464C;
+    padding: 5px 10px;
+    justify-content: space-between;
+}
+
+.logo-smartflavor {
+    height: 40px;
+    width: 40px;
+}
+
+.search-button {
+    color: #FFFF;
+    height: 20px;
+    width: 20px;
+    border: 2px white solid;
+    padding: 5px 5px;
+    border-radius: 9999px;
+}

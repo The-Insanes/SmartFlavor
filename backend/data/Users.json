@@ -1,0 +1,62 @@
+[
+  {
+    "id_user": "user_001",
+    "name": "Alice Johnson",
+    "email": "alice@example.com",
+    "password": "password123",
+    "phone_number": "+1234567890",
+    "description": "Chef entusiasta y amante de la comida saludable.",
+    "saved_post": ["post_002", "post_004"],
+    "upload_posts": ["post_001", "post_003"],
+    "followers": ["user_002", "user_003"],
+    "following": ["user_002", "user_004"]
+  },
+  {
+    "id_user": "user_002",
+    "name": "Bob Smith",
+    "email": "bob@example.com",
+    "password": "password456",
+    "phone_number": "+1987654321",
+    "description": "Amante de la cocina tradicional.",
+    "saved_post": ["post_001", "post_005"],
+    "upload_posts": ["post_002"],
+    "followers": ["user_001"],
+    "following": ["user_001", "user_003"]
+  },
+  {
+    "id_user": "user_003",
+    "name": "Cathy Lee",
+    "email": "cathy@example.com",
+    "password": "password789",
+    "phone_number": "+1230984567",
+    "description": "Blogger de recetas y entusiasta del fitness.",
+    "saved_post": ["post_003"],
+    "upload_posts": ["post_004"],
+    "followers": ["user_001", "user_002"],
+    "following": ["user_004"]
+  },
+  {
+    "id_user": "user_004",
+    "name": "David Brown",
+    "email": "david@example.com",
+    "password": "password321",
+    "phone_number": "+1123456789",
+    "description": "Gurú de la comida rápida y fácil.",
+    "saved_post": ["post_001", "post_004"],
+    "upload_posts": ["post_005"],
+    "followers": ["user_001"],
+    "following": ["user_003"]
+  },
+  {
+    "id_user": "user_005",
+    "name": "Eva Green",
+    "email": "eva@example.com",
+    "password": "password654",
+    "phone_number": "+1098765432",
+    "description": "Apasionada por los postres y la repostería.",
+    "saved_post": ["post_002", "post_003"],
+    "upload_posts": [],
+    "followers": [],
+    "following": ["user_001", "user_002"]
+  }
+]

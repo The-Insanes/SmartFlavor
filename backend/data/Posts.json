@@ -1,0 +1,47 @@
+[
+  {
+    "id_post": "post_001",
+    "url_post": "https://example.com/recetas/spaghetti",
+    "description": "Deliciosa receta de Spaghetti a la Carbonara.",
+    "ingredients": ["Spaghetti", "Panceta", "Yemas de huevo", "Queso parmesano", "Ajo", "Aceite de oliva", "Sal", "Pimienta"],
+    "post_date": "2024-06-01T10:00:00Z",
+    "id_user": "user_001",
+    "num_likes": 120
+  },
+  {
+    "id_post": "post_002",
+    "url_post": "https://example.com/recetas/tacos",
+    "description": "Tacos de pollo deliciosos y fáciles de preparar.",
+    "ingredients": ["Pollo", "Cebolla", "Tomates", "Pimiento", "Ajo", "Comino", "Sal", "Pimienta", "Tortillas de maíz", "Cilantro"],
+    "post_date": "2024-06-02T12:00:00Z",
+    "id_user": "user_002",
+    "num_likes": 90
+  },
+  {
+    "id_post": "post_003",
+    "url_post": "https://example.com/recetas/ensalada-cesar",
+    "description": "Ensalada César con aderezo casero.",
+    "ingredients": ["Lechuga", "Queso parmesano", "Pollo", "Pan", "Ajo", "Mayonesa", "Limón", "Mostaza de Dijon", "Aceite de oliva", "Sal", "Pimienta"],
+    "post_date": "2024-06-03T14:00:00Z",
+    "id_user": "user_001",
+    "num_likes": 110
+  },
+  {
+    "id_post": "post_004",
+    "url_post": "https://example.com/recetas/pancakes-avena",
+    "description": "Pancakes de avena y plátano saludables.",
+    "ingredients": ["Avena", "Plátanos", "Huevos", "Leche", "Polvo de hornear", "Canela", "Sal", "Aceite"],
+    "post_date": "2024-06-04T16:00:00Z",
+    "id_user": "user_003",
+    "num_likes": 150
+  },
+  {
+    "id_post": "post_005",
+    "url_post": "https://example.com/recetas/sopa-lentejas",
+    "description": "Sopa de lentejas nutritiva y reconfortante.",
+    "ingredients": ["Lentejas", "Zanahoria", "Papa", "Cebolla", "Ajo", "Laurel", "Caldo de verduras", "Aceite de oliva", "Sal", "Pimienta"],
+    "post_date": "2024-06-05T18:00:00Z",
+    "id_user": "user_004",
+    "num_likes": 130
+  }
+]
