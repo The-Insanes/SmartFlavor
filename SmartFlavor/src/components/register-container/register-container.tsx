@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IonButton, IonImg } from '@ionic/react';
 import './register-container.css';
-import InputBar from '../input-bar/input-bar';
+import InputBar from '../input/input-bar/input-bar';
 
 interface RegisterContainerProps {
   onLoginClick: () => void;

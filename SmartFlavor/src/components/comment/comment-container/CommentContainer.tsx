@@ -16,7 +16,7 @@ const CommentContainer: React.FC<ContainerProps> = (props) => {
         <div className={props.className}>
             <div className="comment-container">
                 <div className="user-info">
-                    <IonAvatar className="profile-photo">
+                    <IonAvatar className="profile-photo-comment">
                         <img src="images/profile_photos/chef rush.jpeg"></img>
                     </IonAvatar>
                     <IonLabel>{props.user_name}</IonLabel>

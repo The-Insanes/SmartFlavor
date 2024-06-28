@@ -80,8 +80,8 @@ const CommentSection: React.FC<ContainerProps> = (props) => {
             <div className="comment-section-container">
                 <div className="rectangle-up-down"></div>
                 
-                <IonContent className="comment-list">
-                    <IonList className="comment-items">
+                <IonContent className="comment-list-12831">
+                    <IonList className="comment-items-a12231">
                         {comments.map((commment, index) => (
                             <CommentContainer className="user-comment" user_name={commment.user_name} num_likes={commment.likes} description={commment.description} profile_photo={commment.profile_photo} time={commment.time} key={index}/>
                         ))}
